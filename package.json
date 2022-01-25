@@ -1,0 +1,32 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvrbryn445/restaurant-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvrbryn445/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/bvrbryn445/restaurant-page#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "json5": "^2.2.0",
+    "style-loader": "^3.3.1",
+    "toml": "^3.0.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1",
+    "yamljs": "^0.3.0"
+  }
+}

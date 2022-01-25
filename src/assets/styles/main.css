@@ -1,0 +1,57 @@
+/***** COLOR VARIABLES *****/
+:root {
+    --color-brink-pink: #FF7384; /* font color for black */
+    --color-mexican-red: #A61E2F; /* secondary theme */
+    --color-cocoa-brown: #291F1F; /* primary theme */
+    --color-cod-gray: #121010; /* darker version of primary theme */
+    --color-gallery: #F0F0F0;
+}
+
+/***** BASE LAYERS *****/
+body {
+    font-family: 'Playfair Display', Georgia, Arial, "Times New Roman", serif;
+}
+
+/* REUSABLE CLASSES */
+.o-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    padding: 20px 0;
+}
+.border-width--2px{ border-width: 2px; }
+.border-width--3px{ border-width: 3px; }
+
+.primary-button {
+    background-color: var(--color-mexican-red);
+    border: 3px
+}
+
+/***** PROJECT LAYERS *****/
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+}
+
+.logo-text{
+    
+}
+
+.nav-container {
+    display: flex;
+}
+
+/*** FOOTER ***/
+
+/*** COSMETIC LAYERS ***/
+.nav-list.active {
+    
+}
