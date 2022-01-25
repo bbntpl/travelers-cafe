@@ -6,6 +6,16 @@ I combined the two words that I've been thinking of lately. Traveler - I was spe
 ### Why?
 The purpose of this project is to create a multipage website using only JavaScript while using a module bundler called Webpack.
 
-### Screenshots
+### Requirements
+- [ ] Only use JavaScript when attaching an element to the base element
+- [ ] Use different types of loaders in Webpack
+- [X] Create a Figma design for the Restaurant Page
+- [ ] Implement helper functions
+- [ ] Use proper directories for each files such as modules, helpers, database, assets, etc.
+
+### Gif
 
 ### Credit
+https://pixabay.com/users/tianya1223-4833799/
+https://pixabay.com/users/juno1412-7661763/
+https://pixabay.com/users/cattalin-560479/

@@ -1,4 +1,14 @@
 logo: 
   text: The Traveler's Cafe
+nav: 
+  about: Sobre
+  menu: Menú
+  gallery: Galeria
+  contact: Contactos
+footer:
+  copyright: © The Traveler’s Cafe 2022
 contacts: 
-  email: 
+  email: info@the-traverls-cafe.es
+  tel: 812 456 789
+  fax: 812 456 788
+  location: Barcelona, Spain

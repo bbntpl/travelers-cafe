@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/bvrbryn445/restaurant-page#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "json5": "^2.2.0",
