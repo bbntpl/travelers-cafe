@@ -13,7 +13,7 @@ import { createEl, appendChildren } from './helpers';
 
 //let currentPage
 const contentEl = document.getElementById('content');
-const heroEl = createEl('div', 'hero');
+const heroEl = createEl('div', ['hero', 'hero-home']);
 appendChildren(contentEl, [
     HeaderComponent.initialize(), //header
     heroEl,

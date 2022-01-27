@@ -1,9 +1,13 @@
 import { createEl, appendChildren } from '../helpers';
 import data from '../database/data.yaml';
+
 //import module contoller 
 import ModuleController from '../controller/module-controller';
 
 const HeaderComponent = (() => {
+    //texts to be used for nav buttons
+    const { order ,call, reservations } = data.nav.buttons;
+
     //texts/classes to be used for nav menu
     const navItems = ['home', 'about', 'menu', 'contact'];
     const socialLinks = ['facebook', 'instagram', 'twitter', 'google'];
@@ -15,6 +19,7 @@ const HeaderComponent = (() => {
         logoDiv.append(logoText);
         return logoDiv;
     }
+    
     //switch to active style when user click a nav btn
     const _activePage = (e, nthOfModule) => {
         e.preventDefault();
@@ -28,7 +33,9 @@ const HeaderComponent = (() => {
     const _createNavMenu = (el, navItems) => {
         navItems.forEach((txt, i) => {
             const item = createEl('li', 'nav-item');
-            const link = createEl('a', ['nav-link','center'], data.nav[txt]);
+            const link = createEl('a', ['nav-link','center'], data.nav.menu[txt]);
+
+            //add active style to the first child as it is the default page
             if(!i) {
                 link.classList.add('active');
             }
@@ -56,9 +63,9 @@ const HeaderComponent = (() => {
         const socialMediaLinks = createEl('ul', ['sm-links', 'center']);
 
         //children of Left Nav Btns
-        const orderBtn = createEl('button', ['primary-btn', 'border-width-2px'], 'Pedir');
-        const callUsBtn = createEl('button', ['primary-btn', 'border-width-2px'], 'Llamenos');
-        const reservationsBtn = createEl('button', ['primary-btn', 'border-width-2px'], 'Reservaciones');
+        const orderBtn = createEl('button', 'primary-btn', order);
+        const callUsBtn = createEl('button', 'primary-btn', call);
+        const reservationsBtn = createEl('button', 'primary-btn', reservations);
 
         //attach children nodes to the rightful parent
         appendChildren(navContainer, [leftNavBtns, navList, rightNavBtns]);
@@ -73,7 +80,7 @@ const HeaderComponent = (() => {
         return navContainer;
     }
     const initialize = () => {
-        const headerDiv = createEl('div', ['site__header']);
+        const headerDiv = createEl('div', ['site__header', 'center']);
         const headerInnerDiv = createEl('header', ['header-inner', 'center']);
         const navInnerDiv = createEl('div', ['nav-inner', 'center']);
         appendChildren(headerDiv, [headerInnerDiv, navInnerDiv]);

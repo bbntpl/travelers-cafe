@@ -8,30 +8,33 @@ const ModuleController = (() => {
     const _listOfModules = [
         {
             page: HomePage,
-            bgImage: '../assets/images/heroes_home.jpg'
+            name: 'home'
         },
         {
             page: AboutPage,
-            bgImage: '../assets/images/heroes_about.jpg'
+            name: 'about'
         },
         {
             page: MenuPage,
-            bgImage: '../assets/images/heroes_home.jpg'
+            name: 'menu'
         },
         {
             page: ContactPage,
-            bgImage: '../assets/images/heroes_contact.jpg'
+            name: 'contact'
         },
     ]
     function _switchModule(index) {
         //remove all children of content element
-        if (!!main.firstChild === true) {
-            while (main.firstChild) {
-                main.removeChild(main.lastChild)
-            };
-        }
+        while (main.firstChild) {
+            main.removeChild(main.lastChild)
+        };
         const current = _listOfModules[index];
         main.append(current.page.initialize());
+
+        //change hero background image
+        const heroEl = document.querySelector('.hero');
+        _listOfModules.forEach(obj => heroEl.classList.remove(`hero-${obj.name}`));
+        heroEl.style.backgroundImage = heroEl.classList.add(`hero-${current.name}`);
     }
     const setCurrentModule = (index) => _switchModule(index);
     return { setCurrentModule }

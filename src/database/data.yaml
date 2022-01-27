@@ -1,15 +1,48 @@
 logo: 
   text: The Traveler's Cafe
 nav: 
-  home: Hogar
-  about: Sobre
-  menu: Menú
-  gallery: Galeria
-  contact: Contactos
-footer:
-  copyright: © The Traveler’s Cafe
+  buttons:
+    order: Pedir
+    call: Llamenos
+    reservations: Reservaciones
+  menu:
+    home: Hogar
+    about: Sobre
+    menu: Menú
+    contact: Contactos
+home: 
+  hero:
+    primary: Bienvenido al café del viajero 
+    secondary: Uno de los cafés más populares de Europa para los viajeros 
+    buttons: 
+      menu: Descrubrir el menu
+      reservations: Reservaciones
+about:
+  about: 
+    header: Sobre nosotros
+    para: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla blandit massa nec nisi finibus volutpat. Duis dictum risus nec rutrum porttitor. Morbi ultricies euismod pretium. Aliquam erat volutpat. Maecenas commodo arcu sed enim sollicitudin, sit amet viverra ipsum convallis. Nullam lorem diam, tincidunt ut molestie et, bibendum id orci. Vestibulum vulputate tellus sed magna malesuada, vitae pulvinar nibh consectetur. Aliquam egestas aliquet venenatis. Sed vulputate nibh nisi, nec maximus quam consectetur vitae. Proin magna nunc, elementum in finibus vitae, scelerisque id justo. Donec ex massa, venenatis commodo aliquet id, venenatis a augue. Vestibulum augue justo, faucibus vel suscipit a, dictum ac nunc. Praesent rutrum massa non elit aliquam vulputate. Donec ut dolor sagittis, congue lorem nec, imperdiet metus. Ut gravida odio tristique, egestas erat vitae, aliquam quam. Aliquam vitae lacinia libero.
+  journey:
+    header: Nuestro viaje
+    para: Curabitur consectetur tincidunt porta. Cras id justo scelerisque turpis cursus accumsan. Aenean nec aliquam magna, eu interdum arcu. Integer egestas enim sapien, ut mattis nulla faucibus a. Curabitur a mi eu nibh rhoncus convallis. Sed non purus fringilla, gravida urna vitae, ornare sapien. Praesent vulputate viverra est sit amet lacinia. Curabitur tempus est et enim congue, quis accumsan leo mollis.
+menu: 
+  header: Menú
+  salads: Ensaladas
+  drinks: Bebidas
+  soups: Sopas
+  sandwiches: Bocadillos
+  specials: Especiales
 contacts: 
+  header: Contactenoes
   email: info@the-traverls-cafe.es
   tel: 812 456 789
   fax: 812 456 788
   location: Barcelona, Spain
+  form: 
+    name: Contactenos
+    emailAddress: Direction de correo electronico
+    phoneNumber: Numero de telefono
+    subject: Asunto
+    message: Mensaje
+    enter: Enviar
+footer:
+  copyright: © The Traveler’s Cafe

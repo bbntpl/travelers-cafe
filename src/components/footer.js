@@ -36,13 +36,14 @@ const FooterComponent = (() => {
         const currentYear = new Date().getFullYear();
         const footerCopyright = createEl('p', 'copyright');
         const linkToGithub = createEl('a', 'github-link', `${data.footer.copyright} ${currentYear}`);
-        linkToGithub.src = 'https://github.com/bvrbryn445';
+        linkToGithub.href = 'https://github.com/bvrbryn445';
+        linkToGithub.target = '_blank';
         footerCopyright.append(linkToGithub);
         return footerCopyright;
     }
     const initialize = () => {
         const footer = createEl('footer', 'footer');
-        const footerInner = createEl('footer', ['footer-inner', 'o-wrapper']);
+        const footerInner = createEl('footer', ['footer-inner', 'o-wrapper', 'center']);
         footer.append(footerInner);
         appendChildren(footerInner, [_createInlineContacts(), _createCopyright()]);
         return footer;
