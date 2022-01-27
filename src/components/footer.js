@@ -6,24 +6,21 @@ const FooterComponent = (() => {
         {
             icon: 'phone-icon',
             text: data.contacts.tel,
-            src: 'phone.svg'
-        }, 
+        },
         {
             icon: 'email-icon',
             text: data.contacts.email,
-            src: 'email.svg'
         },
         {
             icon: 'location-icon',
             text: data.contacts.location,
-            src: 'location.svg'
         }
     ]
     const _iterateContacts = (el, data) => {
         data.forEach((c) => {
             const contactItem = createEl('dl', 'contact-item');
             const iconWrapper = createEl('dd', 'contact-icon');
-            const icon = createEl('img', [c.icon, 'borderless-img']);
+            const icon = createEl('img', c.icon);
             const text = createEl('dt', 'contact-text', c.text);
             el.append(contactItem);
             iconWrapper.append(icon);
@@ -36,8 +33,9 @@ const FooterComponent = (() => {
         return footerContacts;
     }
     const _createCopyright = () => {
+        const currentYear = new Date().getFullYear();
         const footerCopyright = createEl('p', 'copyright');
-        const linkToGithub = createEl('a', 'github-link', data.footer.copyright);
+        const linkToGithub = createEl('a', 'github-link', `${data.footer.copyright} ${currentYear}`);
         linkToGithub.src = 'https://github.com/bvrbryn445';
         footerCopyright.append(linkToGithub);
         return footerCopyright;
@@ -51,5 +49,4 @@ const FooterComponent = (() => {
     }
     return { initialize }
 })()
-
 export default FooterComponent;

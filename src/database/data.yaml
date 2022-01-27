@@ -1,12 +1,13 @@
 logo: 
   text: The Traveler's Cafe
 nav: 
+  home: Hogar
   about: Sobre
   menu: Menú
   gallery: Galeria
   contact: Contactos
 footer:
-  copyright: © The Traveler’s Cafe 2022
+  copyright: © The Traveler’s Cafe
 contacts: 
   email: info@the-traverls-cafe.es
   tel: 812 456 789

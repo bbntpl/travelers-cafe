@@ -46,24 +46,17 @@ a, button, .nav-list>* {
     font: normal 800 16px 'Playfair Display';
 }
 
-.borderless-img {
-    border: 0px;
-}
-
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ICONS */
-.home-icon {
-    background: url('../images/icons/home.svg') no-repeat;
-    height: 19px;
-    width: 17px;
-    color: #fff;
+.home-icon, .facebook-icon, .instagram-icon, .twitter-icon, .google-icon, .phone-icon, .email-icon, .location-icon {
+    padding: 0px 10px;
 }
 
+/* ICONS */
 .facebook-icon {
     background: url('../images/icons/facebook.svg') no-repeat;
     height: 19.5px;
@@ -90,14 +83,14 @@ a, button, .nav-list>* {
 
 .phone-icon {
     background: url('../images/icons/phone.svg') no-repeat;
-    width: 23.98px;
+    width: 21.5px;
     height: 24px;
 }
 
 .email-icon {
     background: url('../images/icons/email.svg') no-repeat;
-    width: 24.98px;
-    height: 20px;
+    width: 24px;
+    height: 19px;
 }
 
 .location-icon {
@@ -107,7 +100,9 @@ a, button, .nav-list>* {
 }
 
 /***** PROJECT LAYERS *****/
-
+.site__main, .footer, .site__header{
+    z-index: 10;
+}
 /* HEADER */
 .site__header {
     display: flex;
@@ -165,11 +160,12 @@ a, button, .nav-list>* {
     color: #fff;
     list-style-type: none;
 }
-.nav-list > * {
+
+.nav-list>* {
     margin: 0 30px;
 }
 
-.nav-item {
+.nav-item, .nav-menu .nav-link {
     height: 100%;
 }
 
@@ -181,15 +177,20 @@ a, button, .nav-list>* {
     display: flex;
     align-items: center;
 }
-.sm-links > .nav-item {
+
+.sm-links>.nav-item {
     padding: 0 5px;
 }
+
 .nav-btns>button {
     margin-right: 14px;
 }
 
 /*** MAIN ***/
-.main {
+.site__main {
+    min-height: calc(100vh - 157.767px);
+}
+.hero {
     position: absolute;
     top: 0;
     left: 0;
@@ -244,6 +245,11 @@ a, button, .nav-list>* {
 }
 
 /***** COSMETIC LAYERS *****/
+.nav-menu .active {
+    background-color: var(--color-mexican-red);
+    color: #fff;
+}
+
 .primary-btn:hover {
     background-color: #fff;
     color: var(--color-mexican-red);
@@ -253,6 +259,6 @@ a, button, .nav-list>* {
     text-decoration: underline;
 }
 
-.nav-menu>.nav-item:not(:first-child):hover {
+.nav-menu>.nav-item:hover {
     background-color: var(--color-mexican-red);
 }

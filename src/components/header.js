@@ -1,10 +1,11 @@
 import { createEl, appendChildren } from '../helpers';
-
 import data from '../database/data.yaml';
+//import module contoller 
+import ModuleController from '../controller/module-controller';
 
 const HeaderComponent = (() => {
-    //texts to be used
-    const navItems = ['about', 'menu', 'gallery', 'contact'];
+    //texts/classes to be used for nav menu
+    const navItems = ['home', 'about', 'menu', 'contact'];
     const socialLinks = ['facebook', 'instagram', 'twitter', 'google'];
 
     //creating instances of elements
@@ -14,21 +15,29 @@ const HeaderComponent = (() => {
         logoDiv.append(logoText);
         return logoDiv;
     }
-
+    //switch to active style when user click a nav btn
+    const _activePage = (e, nthOfModule) => {
+        e.preventDefault();
+        if(e.target.classList.contains('active')) return;
+        ModuleController.setCurrentModule(nthOfModule);
+        const navMenuItems = document.querySelectorAll('.nav-menu .nav-link');
+        const isClassExists = (el, className) => el.classList.contains(className);
+        navMenuItems.forEach(e => isClassExists(e, 'active') ? e.classList.remove('active') : null);
+        e.target.classList.add('active');
+    }
     const _createNavMenu = (el, navItems) => {
-        const homeIconItem = createEl('li', ['nav-item', 'center']);
-        const homeIcon = createEl('img', ['nav-link', 'home-icon']);
-        el.append(homeIconItem);
-        homeIconItem.append(homeIcon);
-        navItems.forEach(txt => {
-            const item = createEl('li', ['nav-item', 'center']);
-            const link = createEl('a', 'nav-link', data.nav[txt]);
+        navItems.forEach((txt, i) => {
+            const item = createEl('li', 'nav-item');
+            const link = createEl('a', ['nav-link','center'], data.nav[txt]);
+            if(!i) {
+                link.classList.add('active');
+            }
             el.append(item);
             item.append(link);
+            link.addEventListener('click', (e) => _activePage(e, i), false);
         });
     }
-
-    const _createSocialLink = (el, navItems) => {
+    const _createSocialLinks = (el, navItems) => {
         navItems.forEach(name => {
             const item = createEl('li', ['nav-item', 'center']);
             const link = createEl('img', ['nav-link', `${name}-icon`]);
@@ -56,15 +65,14 @@ const HeaderComponent = (() => {
         appendChildren(leftNavBtns, [orderBtn, callUsBtn]);
         appendChildren(navList, [primaryNavMenu, socialMediaLinks]);
 
+        //children nodes of nav menus
         _createNavMenu(primaryNavMenu, navItems);
-        _createSocialLink(socialMediaLinks, socialLinks)
+        _createSocialLinks(socialMediaLinks, socialLinks)
         rightNavBtns.append(reservationsBtn);
 
         return navContainer;
     }
-
     const initialize = () => {
-        //create elements
         const headerDiv = createEl('div', ['site__header']);
         const headerInnerDiv = createEl('header', ['header-inner', 'center']);
         const navInnerDiv = createEl('div', ['nav-inner', 'center']);
@@ -75,6 +83,4 @@ const HeaderComponent = (() => {
     }
     return { initialize }
 })();
-
-
 export default HeaderComponent;

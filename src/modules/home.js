@@ -1,12 +1,15 @@
-// import { createEl, appendChildren } from '../helpers';
-// import data from '../database/data.yaml';
+import { createEl, appendChildren } from '../helpers';
+import data from '../database/data.yaml';
 
-// const HomeModule = (() => {
-//     const initialize = () => {
-//         const home 
-//         return 
-//     }
-//     return { initialize }
-// })()
+const HomePage = (() => {
+    const createHeroOverlay = () => {
+        
+    }
+    const initialize = () => {
+        const home = createEl('div', 'site__home-page', 'This is home');
+        return home;
+    }
+    return { initialize }
+})();
 
-// export default HomeModule;
+export default HomePage;
