@@ -3,7 +3,7 @@ logo:
 nav: 
   buttons:
     order: Pedir
-    call: Llamenos
+    call: Llámenos
     reservations: Reservaciones
   menu:
     home: Hogar
@@ -26,11 +26,10 @@ about:
     para: Curabitur consectetur tincidunt porta. Cras id justo scelerisque turpis cursus accumsan. Aenean nec aliquam magna, eu interdum arcu. Integer egestas enim sapien, ut mattis nulla faucibus a. Curabitur a mi eu nibh rhoncus convallis. Sed non purus fringilla, gravida urna vitae, ornare sapien. Praesent vulputate viverra est sit amet lacinia. Curabitur tempus est et enim congue, quis accumsan leo mollis.
 menu: 
   header: Menú
-  salads: Ensaladas
-  drinks: Bebidas
-  soups: Sopas
-  sandwiches: Bocadillos
-  specials: Especiales
+  categories: [Desayunar,Bebidas,Ensaladas,Bocadillos,Sopas,Especiales]
+  product: 
+    price: 11.90€
+    desc: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 contacts: 
   header: Contactenoes
   email: info@the-traverls-cafe.es

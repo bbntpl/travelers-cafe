@@ -7,15 +7,10 @@ I combined the two words that I've been thinking of lately. Traveler - I was spe
 The purpose of this project is to create a multipage website using only JavaScript while using a module bundler called Webpack.
 
 ### Requirements
-- [ ] Only use JavaScript when attaching an element to the base element
-- [ ] Use different types of loaders in Webpack
+- [X] Only use JavaScript when attaching an element to the base element
+- [X] Use different types of loaders in Webpack
 - [X] Create a Figma design for the Restaurant Page
-- [ ] Implement helper functions
-- [ ] Use proper directories for each files such as modules, helpers, database, assets, etc.
+- [X] Implement helper functions
+- [X] Use proper directories for each files such as modules, helpers, database, assets, etc.
 
-### Gif
-
-### Credit
-https://pixabay.com/users/tianya1223-4833799/
-https://pixabay.com/users/juno1412-7661763/
-https://pixabay.com/users/cattalin-560479/
+### Live Demo
