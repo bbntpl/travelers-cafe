@@ -18,7 +18,7 @@ const FooterComponent = (() => {
     ]
     const _iterateContacts = (el, data) => {
         data.forEach((c) => {
-            const contactItem = createEl('dl', 'contact-item');
+            const contactItem = createEl('dl', ['contact-item', 'center']);
             const iconWrapper = createEl('dd', 'contact-icon');
             const icon = createEl('img', c.icon);
             const text = createEl('dt', 'contact-text', c.text);

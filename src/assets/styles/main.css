@@ -11,6 +11,7 @@
     --color-gallery: #F0F0F0;
     --color-nav: rgba(22, 18, 18, 0.7);
     --color-home-overlay: rgba(22, 18, 18, 0.6);
+    --color-about-overlay: rgba(41, 31, 31, 0.7);
     --min-height-header: calc(100vh - 141.767px);
 }
 
@@ -39,21 +40,24 @@ a, button, .nav-list>* {
     border-width: 3px;
 }
 
-.primary-btn, .primary-btn--large{
+.primary-btn, .primary-btn--large {
     background-color: var(--color-mexican-red);
     color: #fff;
 }
+
 .primary-btn {
     padding: 5px 15px;
     font: normal 800 16px 'Playfair Display';
     border: 2px solid #fff;
 }
-.primary-btn--large{
+
+.primary-btn--large {
     font: normal 800 24px 'Playfair Display';
     padding: 10px 30px;
     border: 4px solid #fff;
     text-transform: uppercase;
 }
+
 .center {
     display: flex;
     justify-content: center;
@@ -198,7 +202,6 @@ a, button, .nav-list>* {
 }
 
 .hero {
-    position: absolute;
     top: 0;
     left: 0;
     min-height: max-content;
@@ -209,16 +212,23 @@ a, button, .nav-list>* {
     z-index: 1;
 }
 
-.hero-home{
+.hero-home {
+    position: absolute;
     background-image: url('../images/heroes/hero_home.jpg');
 }
-.hero-about{
+
+.hero-about {
     background-image: url('../images/heroes/hero_about.jpg');
+    position: fixed;
 }
-.hero-menu{
+
+.hero-menu {
+    position: absolute;
     background-image: url('../images/heroes/hero_menu.jpg');
 }
-.hero-contact{
+
+.hero-contact {
+    position: absolute;
     background-image: url('../images/heroes/hero_contact.jpg');
 }
 
@@ -230,6 +240,7 @@ a, button, .nav-list>* {
     min-height: inherit;
     height: inherit;
     color: #fff;
+    width: 100%;
 }
 
 .low-dark-opacity-overlay {
@@ -237,8 +248,7 @@ a, button, .nav-list>* {
     top: 0;
     left: 0;
     height: 102%;
-    width: 50%;
-    min-width: 500px;
+    width: 54%;
     background-color: var(--color-home-overlay);
     margin-top: -2px;
     z-index: 3;
@@ -266,30 +276,180 @@ a, button, .nav-list>* {
     flex-direction: column;
     justify-content: flex-start;
     width: 50%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 .module__home-page .primary-txt {
-    font: normal 600 72px 'Playfair Display';
+    font: normal 600 clamp(3.2em, 4vw, 8em) 'Playfair Display';
     padding: 0 0 20px 0;
 }
 
 .module__home-page .secondary-txt {
-    font: italic 500 36px 'Playfair Display';
+    font: italic 500 clamp(2em, 2vw, 4em) 'Playfair Display';
 }
 
-.module__home-page .btn-container{
+.module__home-page .btn-container {
     display: flex;
     flex-direction: column;
 }
-.btn-container > button{
+
+.btn-container>button {
     margin: 15px 0;
 }
-.hero-btn-reservations{
+
+.hero-btn-reservations {
     display: none;
 }
 
 /* MODULE - ABOUT */
+.about-wrapper {
+    display: flex;
+    align-self: center;
+    min-height: var(--min-height-header);
+    height: max-content;
+}
+
+.about-content-wrapper {
+    position: relative;
+    align-self: center;
+    min-height: 730px;
+    height: max-content;
+    max-height: max-content;
+    border: 4px solid var(--color-brink-pink);
+    background-color: var(--color-about-overlay);
+    margin: 80px 0;
+}
+
+.about-content-container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    min-height: 80%;
+    height: max-content;
+    max-height: max-content;
+    width: 100%;
+    padding: 0 60px;
+    align-self: center;
+    gap: 80px;
+}
+
+.about-content-info {
+    flex: 4 1 auto;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.about-content-header {
+    font: normal 500 48px 'Playfair Display';
+}
+
+.about-content-txt {
+    font: normal 500 18px 'Playfair Display';
+    line-height: 24px;
+}
+
+.about-content-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 0 70px 0;
+}
+
+.about-owner-wrapper, .about-content-header {
+    margin-bottom: 55px;
+}
+
+.about-owner-wrapper {
+    width: 202px;
+    height: 315px;
+}
+
+.about-owner-wrapper, .about-cafe-wrapper {
+    position: relative;
+    border: 3px solid var(--color-brink-pink);
+}
+
+.about-owner, .about-cafe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border: 3px solid #fff;
+    transition: transform .4s ease-out;
+    z-index: 15;
+}
+
+.about-owner {
+    background: url(../images/personal/owner.jpg) no-repeat center center fixed;
+    transform: translateX(30px) translateY(-30px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-cafe-wrapper {
+    width: 315px;
+    height: 175px;
+}
+
+.about-cafe {
+    background: url(../images/heroes/hero_about.jpg) no-repeat center center fixed;
+    transform: translateX(-60px) translateY(15px) rotate(-15deg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.journey-wrapper {
+    height: max-content;
+    background-color: var(--color-mexican-red);
+    height: 580px;
+}
+
+.journey-content-container {
+    display: flex;
+    align-items: center;
+    border: 4px solid #fff;
+}
+
+.journey-content-container>*:not(:first-child) {
+    padding: 0 35px;
+}
+
+.journey-img-wrapper {
+    position: relative;
+    width: 158px;
+    height: 390px;
+}
+
+.journey-content-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background: url(../images/personal/journey.jpg) no-repeat center center fixed;
+    background-size: center;
+    padding-left: 100px;
+}
+
+.journey-content-header {
+    font: normal normal 64px 'Playfair Display';
+    width: min-content;
+    line-height: 85px;
+}
+
+.journey-content-txt {
+    font: italic 600 24px 'Playfair Display';
+    line-height: 32px;
+    text-align: right;
+    padding-right: 30px;
+}
 
 /*** FOOTER ***/
 .footer {
@@ -354,25 +514,98 @@ a, button, .nav-list>* {
     background-color: var(--color-mexican-red);
 }
 
+.about-owner:hover {
+    transform: translateX(0) translateY(0);
+}
+
+.about-cafe:hover {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+}
+
 /***** MOBILE FRIENDLINESS *****/
 @media screen and (max-width: 1000px) {
-    .nav-btns{
+    .nav-btns {
         display: none;
     }
-    .nav-container{
+
+    .nav-container {
         justify-content: center;
     }
-    .hero-btn-reservations{
+
+    .hero-btn-reservations {
         display: initial;
+    }
+
+    .about-content-container {
+        flex-direction: column;
+    }
+
+    .about-content-images {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .sm-links {
+        display: none;
+    }
+
+    .about-content-images {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .low-dark-opacity-overlay {
+        width: 100%;
+        height: 60%;
+        color: var(--color-mexican-red);
+    }
+
+    .module__home-page .hero-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+    .module__home-page .home-inner {
+        height: 78vh;
+    }
+
+    .intro-text-container {
+        margin: 0 0 30px 0;
+    }
+
+    .journey-content-container {
+        flex-direction: column;
+    }
+
+    .footer-contacts {
+        flex-direction: column-reverse;
+        font: italic 600 15px 'Playfair Display';
     }
 }
 
 
 @media screen and (max-width: 428px) {
-    .nav-btns,.sm-links{
+    .nav-btns {
         display: none;
     }
-    .nav-container{
+
+    .logo-text {
+        font-size: 28px;
+    }
+
+    .nav-link {
+        padding: 0 11px;
+    }
+
+    .nav-container {
         justify-content: center;
+    }
+
+    .footer-contacts {
+        padding: 18px 0 4px;
     }
 }
