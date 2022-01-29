@@ -385,7 +385,7 @@ a, button, .nav-list>*, input[type=button] {
 }
 
 .about-owner {
-    background: url('../images/personal/owner.jpg') no-repeat center center fixed;
+    background: url('../images/personal/owner.jpg') no-repeat center center;
     transform: translateX(30px) translateY(-30px);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -399,7 +399,7 @@ a, button, .nav-list>*, input[type=button] {
 }
 
 .about-cafe {
-    background: url('../images/heroes/hero_about.jpg') no-repeat center center fixed;
+    background: url('../images/heroes/hero_about.jpg') no-repeat center center;
     transform: translateX(-60px) translateY(15px) rotate(-15deg);
     -webkit-background-size: cover;
     -moz-background-size: cover;

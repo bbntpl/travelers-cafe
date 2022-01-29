@@ -28,6 +28,8 @@ const ModuleController = (() => {
         while (main.firstChild) {
             main.removeChild(main.lastChild)
         };
+
+        //switch module by attaching the module to the main content
         const current = _listOfModules[index];
         main.append(current.page.initialize());
 
