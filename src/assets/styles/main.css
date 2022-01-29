@@ -13,7 +13,7 @@
     --color-home-overlay: rgba(22, 18, 18, 0.6);
     --color-about-overlay: rgba(41, 31, 31, 0.7);
     --color-menu-overlay: rgba(41, 31, 31, 0.3);
-    --min-height-header: calc(100vh - 141.767px);
+    --min-height-header: calc(100vh - 165.01px);
 }
 
 /***** BASE LAYERS *****/
@@ -408,9 +408,9 @@ a, button, .nav-list>*, input[type=button] {
 }
 
 .journey-wrapper {
-    height: max-content;
     background-color: var(--color-mexican-red);
-    height: 580px;
+    min-height: 680px;
+    height: max-content;
 }
 
 .journey-content-container {
@@ -419,14 +419,20 @@ a, button, .nav-list>*, input[type=button] {
     border: 4px solid #fff;
 }
 
-.journey-content-container>*:not(:first-child) {
-    padding: 0 35px;
+.journey-content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 150px;
+    padding-right: 30px;
+    text-align: right;
 }
 
 .journey-img-wrapper {
     position: relative;
-    width: 158px;
-    height: 390px;
+    width: 170px;
+    height: 420px;
 }
 
 .journey-content-img {
@@ -435,22 +441,18 @@ a, button, .nav-list>*, input[type=button] {
     left: 0;
     width: inherit;
     height: inherit;
-    background: url('../images/personal/journey.jpg') no-repeat center center fixed;
+    background: url('../images/personal/journey.jpg') no-repeat center center;
     background-size: center;
-    padding-left: 100px;
 }
 
 .journey-content-header {
     font: normal normal 64px 'Playfair Display';
-    width: min-content;
     line-height: 85px;
 }
 
 .journey-content-txt {
     font: italic 600 24px 'Playfair Display';
     line-height: 32px;
-    text-align: right;
-    padding-right: 30px;
 }
 
 /*** MODULE - MENU ***/
@@ -814,6 +816,47 @@ a, button, .nav-list>*, input[type=button] {
         flex-direction: column;
     }
 
+    /*** on work ***/
+    .about-wrapper {
+        min-height: var(--min-height-header);
+        height: max-content;
+    }
+
+    .about-content-wrapper {
+        position: relative;
+        align-self: center;
+        min-height: 730px;
+        height: max-content;
+        max-height: max-content;
+        margin: 80px 0;
+    }
+
+    .about-content-container {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .about-content-info {
+        flex: 4 1 auto;
+        color: #fff;
+        padding-bottom: 40px;
+    }
+
+    .journey-content-container {
+        justify-content: center;
+    }
+
+    .journey-content-info {
+        margin-left: 0;
+        padding: 10px 20px 30px;
+    }
+
+    .journey-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+    /** on work ***/
     .menu {
         padding: 50px 8px;
         margin: 30px 0;
@@ -916,7 +959,22 @@ a, button, .nav-list>*, input[type=button] {
     .nav-container {
         justify-content: center;
     }
-
+    .about-content-wrapper{
+        border: 0;
+        margin: 0;
+    }
+    .about-content-container{
+        padding: 20px 7px;
+    }
+    .journey-content-container{
+        border: 0;
+    }
+    .journey-content-header{
+        font-size: 40px;
+    }
+    .journey-content-txt{
+        font-size: 16px;
+    }
     .menu {
         padding: 50px 0;
         margin: 0;

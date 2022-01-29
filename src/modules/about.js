@@ -38,12 +38,14 @@ const AboutModule = (() => {
         const ourJourneyContainer = createEl('div', 'journey-content-container');
         const journeyImgWrapper = createEl('div', 'journey-img-wrapper');
         const journeyImg = createEl('div', 'journey-content-img');
+        const journeyInfo = createEl('div', 'journey-content-info');
         const journeyHeader = createEl('h1', 'journey-content-header', journey.header);
         const journeyTxt = createEl('p', 'journey-content-txt', journey.para);
         ourJourneyEl.append(oWrapper);
         oWrapper.append(ourJourneyContainer);
         journeyImgWrapper.append(journeyImg);
-        appendChildren(ourJourneyContainer, [journeyImgWrapper, journeyHeader, journeyTxt]);
+        appendChildren(journeyInfo, [journeyHeader, journeyTxt]);
+        appendChildren(ourJourneyContainer, [journeyImgWrapper, journeyInfo]);
         return ourJourneyEl;
     }
     const initialize = () => {
