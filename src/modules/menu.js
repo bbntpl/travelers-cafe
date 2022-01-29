@@ -1,9 +1,6 @@
 import { createEl, appendChildren, importAll } from '../helpers';
 import data from '../database/data.yaml';
 
-const dirFoods = '../assets/images/foods/'
-const regExt = /\.svg|png|jpg$/;
-
 //import images from the target directiories
 const breakfasts = require.context(`../assets/images/foods/breakfasts`, true, /\.svg|png|jpg$/);
 const drinks = require.context(`../assets/images/foods/drinks`, true, /\.svg|png|jpg$/);

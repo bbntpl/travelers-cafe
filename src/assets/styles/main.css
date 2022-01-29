@@ -22,7 +22,7 @@
     font-family: 'Playfair Display', Georgia, Arial, "Times New Roman", serif;
 }
 
-a, button, .nav-list>* {
+a, button, .nav-list>*, input[type=button] {
     cursor: pointer;
 }
 
@@ -146,6 +146,7 @@ a, button, .nav-list>* {
 .logo-text {
     color: #fff;
     font: italic 600 36px 'Playfair Display';
+    padding: 12px 0;
 }
 
 .nav-container {
@@ -384,7 +385,7 @@ a, button, .nav-list>* {
 }
 
 .about-owner {
-    background: url(../images/personal/owner.jpg) no-repeat center center fixed;
+    background: url('../images/personal/owner.jpg') no-repeat center center fixed;
     transform: translateX(30px) translateY(-30px);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -398,7 +399,7 @@ a, button, .nav-list>* {
 }
 
 .about-cafe {
-    background: url(../images/heroes/hero_about.jpg) no-repeat center center fixed;
+    background: url('../images/heroes/hero_about.jpg') no-repeat center center fixed;
     transform: translateX(-60px) translateY(15px) rotate(-15deg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -434,7 +435,7 @@ a, button, .nav-list>* {
     left: 0;
     width: inherit;
     height: inherit;
-    background: url(../images/personal/journey.jpg) no-repeat center center fixed;
+    background: url('../images/personal/journey.jpg') no-repeat center center fixed;
     background-size: center;
     padding-left: 100px;
 }
@@ -465,7 +466,8 @@ a, button, .nav-list>* {
     padding: 80px 20px;
     margin: 50px 0;
     text-align: center;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 30px 45px rgba(0, 0, 0, 0.25);
+    border: 8px solid #fff;
 }
 
 .menu__header {
@@ -523,6 +525,7 @@ a, button, .nav-list>* {
     width: inherit;
     height: inherit;
     z-index: 15;
+    transition: opacity .7s linear;
 }
 
 .menu-product__info-upper {
@@ -539,6 +542,131 @@ a, button, .nav-list>* {
 
 .menu-product__desc {
     text-align: start;
+}
+
+/*** MODULE - CONTACT ***/
+.module__contact-page {
+    max-height: max-content;
+    width: 100%;
+}
+
+.contact__header-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 203px;
+}
+
+.contact__header {
+    font: normal 800 72px 'Playfair Display';
+    line-height: 96px;
+    text-align: center;
+}
+
+.contact__main {
+    position: relative;
+    min-height: calc(var(--min-height-header) - 203px);
+    background-color: var(--color-gallery);
+    height: max-content;
+}
+
+.contact__form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 0 auto;
+    padding-right: 420px;
+    height: max-content;
+}
+
+.contact__form>* {
+    margin: 15px 0;
+}
+
+.contact-form__input-holders {
+    max-width: 750px;
+    display: flex;
+    gap: 31px 20px;
+    font: normal normal 18px Arial;
+    flex-wrap: wrap;
+}
+
+.contact-form__inputs {
+    font: normal normal 18px Arial;
+    border: 1px solid rgba(46, 45, 45, 0.4);
+    background-color: transparent;
+    padding: 11px 0 11px 17px;
+    flex: 1 1 300px;
+}
+
+.contact-form__inputs:last-child {
+    min-height: 150px;
+}
+
+.contact-form__send-btn {
+    width: 213px;
+    height: 71px;
+    background: var(--color-mexican-red);
+    color: #fff;
+    font: normal 600 36px 'Playfair Display';
+    line-height: 48px;
+}
+
+.contact-form__header {
+    padding: 20px 0;
+    font: normal 800 36px 'Playfair Display';
+    line-height: 48px;
+    color: #000;
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: var(--color-mexican-red);
+    color: #fff;
+}
+
+.contact-list__img-wrapper {
+    position: relative;
+    width: 295px;
+    height: 307px;
+}
+
+.contact-list__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 25px;
+    border: 4px solid #fff;
+    background: url('../images/foods/contact_food.jpg');
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.contact-list__header {
+    font: normal bold 18px Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 0 15px 0;
+    text-align: center;
+}
+
+.contact-list__info {
+    text-align: center;
+    line-height: 30px;
 }
 
 /*** FOOTER ***/
@@ -690,15 +818,77 @@ a, button, .nav-list>* {
         padding: 50px 8px;
         margin: 30px 0;
     }
-    
+
     .menu__list {
         padding: 0 20px;
     }
-    
+
     .menu-list__products {
         gap: 20px;
     }
-    
+
+    .module__contact-page {
+        max-height: max-content;
+        width: 100%;
+    }
+
+    .contact__header-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: 203px;
+    }
+
+    .contact__header {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .contact__form {
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    .contact__form>* {
+        margin: 15px 20px;
+    }
+
+    .contact-form__input-holders {
+        gap: 10px 5px;
+    }
+
+    .contact-form__send-btn {
+        width: 213px;
+        height: 71px;
+        background: var(--color-mexican-red);
+        color: #fff;
+        font: normal 600 36px 'Playfair Display';
+        line-height: 48px;
+    }
+
+    .contact-form__header {
+        padding: 20px 0;
+        font: normal 800 36px 'Playfair Display';
+        line-height: 48px;
+        color: #000;
+        text-align: center;
+    }
+
+    .contact__list {
+        justify-content: space-evenly;
+        width: 100%;
+        position: initial;
+        padding: 50px 0;
+    }
+
+    .contact-list__header, .contact-list__info {
+        text-align: start;
+        padding: 0 20px;
+    }
+
+    .contact-list__header {
+        margin-top: 30px;
+    }
+
     .footer-contacts {
         flex-direction: column-reverse;
         font: italic 600 15px 'Playfair Display';
@@ -710,9 +900,11 @@ a, button, .nav-list>* {
     .nav-btns {
         display: none;
     }
-    .o-wrapper{
+
+    .o-wrapper {
         padding: 0;
     }
+
     .logo-text {
         font-size: 28px;
     }
@@ -727,17 +919,18 @@ a, button, .nav-list>* {
 
     .menu {
         padding: 50px 0;
-        margin: 30px 0;
+        margin: 0;
+        border: 0;
     }
-    
+
     .menu__list {
         padding: 0;
     }
-    
+
     .menu-list__products {
         gap: 30px 5px;
     }
-    
+
     .footer-contacts {
         padding: 18px 0 4px;
     }

@@ -31,17 +31,12 @@ menu:
     price: 11.90€
     desc: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 contacts: 
-  header: Contactenoes
+  header: Contáctenos
   email: info@the-traverls-cafe.es
   tel: 812 456 789
   fax: 812 456 788
   location: Barcelona, Spain
-  form: 
-    name: Contactenos
-    emailAddress: Direction de correo electronico
-    phoneNumber: Numero de telefono
-    subject: Asunto
-    message: Mensaje
-    enter: Enviar
+  label: Póngase en contacto con nosotros.
+  form: [Contáctenos, Direction de correo electronico, Numero de telefono, Asunto, Mensaje]
 footer:
   copyright: © The Traveler’s Cafe
