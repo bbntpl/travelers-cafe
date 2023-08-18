@@ -1,5 +1,5 @@
 # The Traveler's Cafe
-Click [here](bvrbryn445.github.io/restaurant-page/) to access live demo.
+Click [here](https://bvrbryn445.github.io/restaurant-page/) to access live demo.
 
 ### Restaurant Name Origin
 I combined the two words that I've been thinking of lately. Traveler - I was speculating about the ideal travel date to go to Spain or Sout America so I can fully immerse myself with Spanish since I'm currently learning the language. And Cafe - the last goal in my mind was to try out different drinks in countries I desire to visit.
